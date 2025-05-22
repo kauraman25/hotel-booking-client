@@ -10,9 +10,13 @@ function Navbar() {
     dispatch({ type: "LOGOUT" });
     navigate("/login");
   }
+  const handleLogin = () => {
+    navigate("/login")
+  }
   return (
     <div className="navbar">
       <div className="navContainer">
+        
         <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
           <span className="logo">FindYourComfort</span>
         </Link>
@@ -22,8 +26,8 @@ function Navbar() {
         <button className="navButton" onClick={handleLogout}>Logout</button>
         </> : (
           <div className="navItems">
-            <button className="navButton">Register</button>
-            <button className="navButton">Login</button>
+            <button className="navButton" onClick={handleLogin}>Register</button>
+            <button className="navButton" onClick={handleLogin}>Login</button>
           </div>
         )}
       </div>

@@ -41,7 +41,9 @@ function Header({ type }) {
       };
     });
   };
-
+  const handlelogin = () => {
+    navigate("/login");
+  }
   const {dispatch} = useContext(SearchContext);
   const {user} = useContext(AuthContext);
   const handleSearch = () => {
@@ -83,7 +85,7 @@ function Header({ type }) {
               turn travel dreams into reality. Browse, book, and jet
               off—adventure is just a click away.
             </p>
-            {!user && <button className="headerBtn">Sign in / Register</button>}
+            {!user && <button className="headerBtn" onClick={handlelogin}>Sign in / Register</button>}
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />

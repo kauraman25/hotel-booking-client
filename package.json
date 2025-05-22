@@ -20,7 +20,8 @@
     "react": "^19.0.0",
     "react-date-range": "^2.0.1",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.5.3"
+    "react-router-dom": "^7.5.3",
+    "swiper": "^11.2.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",

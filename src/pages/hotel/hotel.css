@@ -49,21 +49,30 @@
     font-weight: 500;
   }
   
-  .hotelImages {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .hotelImgWrapper {
-    width: 33%;
-  }
-  
-  .hotelImg {
-    width: 100%;
-    object-fit: cover;
-    cursor: pointer;
-  }
+.hotelImages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.hotelImgWrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hotelImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hotelImg:hover {
+  transform: scale(1.05);
+}
   
   .hotelDetails {
     display: flex;
